@@ -13,3 +13,28 @@ function checkObj(obj, checkProp) {
 }
 
 <!--------------------Challenge---------------------------------------------->
+
+var myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  },
+  {
+    "artist": "Hozier",
+    "title": "Cherry Wine",
+    "release_year": 2001,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ]
+  }
+];
+<!--------------------Challenge---------------------------------------------->
