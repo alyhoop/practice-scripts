@@ -60,12 +60,16 @@ var collection = {
 function updateRecords(id, prop, value) {
   if (prop !== id.prop['tracks']) {
     id.push(value);
-  } else if (id.prop === id['tracks'] && id.['tracks'] === []) {
-    id.push(id.['tracks'][]);
-  } else if (id.prop) {
-
+  } else if (id.prop === id['tracks'] && id['tracks'] === []) {
+    id.push(id['tracks'][]);
+  } else if (id.prop['tracks'] && ) {
+    id.push(value);
+  } else (value === '') {
+    delete id.prop[value];
   }
+
    return collection;
 }
+
 
 updateRecords(5439, "artist", "ABBA");
