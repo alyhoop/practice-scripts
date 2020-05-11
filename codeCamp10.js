@@ -57,24 +57,15 @@ var collection = {
 };
 
 function updateRecords(id, prop, value) {
-  if (prop !== 'tracks' && value !== "") {
+  if(value === "") delete collection[id][prop];
+  else if(prop === "tracks") {
+    collection[id][prop] = collection[id][prop] || [];
+    collection[id][prop].push(value);
+  } else {
     collection[id][prop] = value;
   }
 
-  if (prop === 'tracks' && collection[id][prop] === undefined) {
-    collection[id][prop] = [];
-  }
-
-  if (prop === 'tracks' && value !== "") {
-    let track = collection[id][prop];
-    track.push(value);
-  }
-
-  if (value === "") {
-    delete collection[id][prop];
-  }
-
-   return collection;
+  return collection;
 }
 
 
