@@ -56,16 +56,22 @@ var collection = {
   }
 };
 
-// Only change code below this line
 function updateRecords(id, prop, value) {
-  if (prop !== id.tracks && value !== "") {
-    [].push(value);
-  } else if (prop === id.tracks && id.tracks === undefined) {
-    [].push(id.tracks[value]);
-  } else if (prop === id.tracks && value !== "") {
-    [].tracks.push(value);
-  } else {
-    delete [].prop.value;
+  if (prop !== 'tracks' && value !== "") {
+    collection[id][prop] = value;
+  }
+
+  if (prop === 'tracks' && collection[id][prop] === undefined) {
+    collection[id][prop] = [];
+  }
+
+  if (prop === 'tracks' && value !== "") {
+    let track = collection[id][prop];
+    track.push(value);
+  }
+
+  if (value === "") {
+    delete collection[id][prop];
   }
 
    return collection;
