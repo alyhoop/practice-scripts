@@ -43,16 +43,21 @@ var contacts = [
 ];
 
 
+
 function lookUpProfile(name, prop){
 // Only change code below this line
     for (let i = 0; i < contacts.length; i++) {
-        for (let j = 0; j < contacts[i].length; j++) {
-            if (name !== contacts[i]) {
-                return "No such contact";
-            }
-        }
+            if (name === contacts[i].firstName) {
+                if (prop === contacts[i].hasOwnProperty(prop)) {
+                    return contacts[i][prop];
+              } else {
+        return "No such property";
+      }
     }
-// Only change code above this line
+  }
+  return "No such contact";
 }
+// Only change code above this line
 
-lookUpProfile("Akira", "address");
+
+lookUpProfile("Kristian","likes");
