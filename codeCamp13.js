@@ -46,11 +46,13 @@ var contacts = [
 function lookUpProfile(name, prop){
 // Only change code below this line
     for (let i = 0; i < contacts.length; i++) {
-        for (let j = 0; j < contacts.length; j++) {
-            if (name !== contacts[name]) {
+        for (let j = 0; j < contacts[i].length; j++) {
+            if (name !== contacts[i]) {
                 return "No such contact";
             }
         }
     }
 // Only change code above this line
 }
+
+lookUpProfile("Akira", "address");
