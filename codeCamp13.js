@@ -44,20 +44,15 @@ var contacts = [
 
 
 
-function lookUpProfile(name, prop){
-// Only change code below this line
-    for (let i = 0; i < contacts.length; i++) {
-            if (name === contacts[i].firstName) {
-                if (prop === contacts[i].hasOwnProperty(prop)) {
-                    return contacts[i][prop];
-              } else {
+function lookUpProfile(name, prop) {
+  for (var x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        return contacts[x][prop];
+      } else {
         return "No such property";
       }
     }
   }
   return "No such contact";
 }
-// Only change code above this line
-
-
-lookUpProfile("Kristian","likes");
