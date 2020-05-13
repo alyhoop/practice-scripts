@@ -17,8 +17,9 @@ function re(i) {
   if (i <= 0){
     return 0;
   } else {
-    re(i-1);
     console.log(i);
+    re(i-1);
+    //console.log(i);  counts up
   }
 }
 
