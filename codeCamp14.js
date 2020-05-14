@@ -90,3 +90,14 @@ function rangeOfNumbers(startNum, endNum) {
     return numbers;
   }
 }
+
+//Trav's
+//
+// function rangeOfNumbers(startNum, endNum, arr = []) {
+//     arr.push(startNum)
+//   if (startNum === endNum) {
+//     return arr
+//   } else {
+//     return rangeOfNumbers(startNum + 1, endNum, arr)
+//   }
+// }
