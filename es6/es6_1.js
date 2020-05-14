@@ -40,4 +40,23 @@ let i = 'function scope';
 
 const has all the awesome features that let has, with the added bonus that
 variables declared using const are read-only. They are a constant value, which
-means that once a variable is assigned with const, it cannot be reassigned.*/
+means that once a variable is assigned with const, it cannot be reassigned.
+
+A common practice when naming constants is to use all uppercase letters, with
+ words separated by an underscore.*/
+
+ function printManyTimes(str) {
+  "use strict";
+
+  // Only change code below this line
+
+  const SENTENCE = str + " is cool!";
+  for (let i = 0; i < str.length; i+=2) {
+    console.log(SENTENCE);
+  }
+
+  // Only change code above this line
+
+}
+printManyTimes("freeCodeCamp");
+<!---------------------------------------------------------------------------->
