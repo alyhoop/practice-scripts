@@ -111,3 +111,22 @@ const myConcat = (arr1, arr2) => arr1.concat(arr2);
 
 console.log(myConcat([1, 2], [3, 4, 5]));
 <!---------------------------------------------------------------------------->
+/*ES6 introduced default parameters for functions. */
+
+// Only change code below this line
+const increment = (number, value = 1) => number + value;
+// Only change code above this line
+<!---------------------------------------------------------------------------->
+/* ES6 introduced rest parameters. These allow us to accept infinite arguments
+as an array*/
+
+//without rest parameter
+const sum = (x, y, z) => {
+  const args = [x, y, z];
+  return args.reduce((a, b) => a + b, 0);
+}
+//with rest parameter
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+<!---------------------------------------------------------------------------->
