@@ -46,7 +46,7 @@ A common practice when naming constants is to use all uppercase letters, with
  words separated by an underscore.*/
 
  function printManyTimes(str) {
-  "use strict";
+  "use strict"; //throws an error with undeclared variables
 
   // Only change code below this line
 
@@ -59,4 +59,55 @@ A common practice when naming constants is to use all uppercase letters, with
 
 }
 printManyTimes("freeCodeCamp");
+<!---------------------------------------------------------------------------->
+/* However, it is important to understand that objects (including arrays and
+functions) assigned to a variable using const are still mutable. Using the const
+ declaration only prevents reassignment of the variable identifier.*/
+
+ const s = [5, 7, 2];
+function editInPlace() {
+  'use strict';
+  // Only change code below this line
+  s.unshift(s.pop());
+  // Using s = [2, 5, 7] would be invalid
+
+  // Only change code above this line
+}
+editInPlace();
+<!---------------------------------------------------------------------------->
+/*As seen in the previous challenge, const declaration alone doesn't really
+protect your data from mutation. To ensure your data doesn't change, JavaScript
+ provides a function Object.freeze to prevent data mutation.*/
+
+ function freezeObj() {
+  'use strict';
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  // Only change code below this line
+Object.freeze(MATH_CONSTANTS);
+
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+<!---------------------------------------------------------------------------->
+/*Arrow functions allow us to write concise anonymous functions. Arrow functions
+will accept parameters. */
+
+const magic = () => new Date();
+<!---------------------------------------------------------------------------->
+/*Arrow functions will accept parameters. If an arrow function has a single
+argument, the parentheses enclosing the argument may be omitted. It is possible
+to pass more than one argument into an arrow function.*/
+
+
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
 <!---------------------------------------------------------------------------->
