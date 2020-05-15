@@ -180,6 +180,7 @@ const {tomorrow} = HIGH_TEMPERATURES;
  <!---------------------------------------------------------------------------->
 /*You can use the same principles from the previous two lessons to destructure
  values from nested objects.*/
+
  const LOCAL_FORECAST = {
   yesterday: { low: 61, high: 75 },
   today: { low: 64, high: 77 },
@@ -194,10 +195,27 @@ const {today: {high: highToday}} = LOCAL_FORECAST;
 // Only change code above this line
 <!---------------------------------------------------------------------------->
 /*ES6 makes destructuring arrays as easy as destructuring objects.*/
+
 let a = 8, b = 6;
 // Only change code below this line
 [a, b] = [b, a];
 
 console.log(b);
 console.log(a);
+
 <!---------------------------------------------------------------------------->
+/*In some situations involving array destructuring, we might want to collect
+ the rest of the elements into a separate array.*/
+
+ const source = [1,2,3,4,5,6,7,8,9,10];
+ function removeFirstTwo(list) {
+   "use strict";
+   // Only change code below this line
+   const [a, b, ...arr] = list; // Change this line
+   // Only change code above this line
+   return arr;
+ }
+ const arr = removeFirstTwo(source);
+
+
+ <!---------------------------------------------------------------------------->
