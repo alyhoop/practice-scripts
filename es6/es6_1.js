@@ -142,3 +142,62 @@ console.log(arr2);
 <!---------------------------------------------------------------------------->
 /*Destructuring assignment is special syntax introduced in ES6, for neatly
 assigning values taken directly from an object.*/
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+// Only change code below this line
+// BEFORE:
+// const today = HIGH_TEMPERATURES.today;
+// const tomorrow = HIGH_TEMPERATURES.tomorrow;
+//
+
+const {today} = HIGH_TEMPERATURES;
+const {tomorrow} = HIGH_TEMPERATURES;
+
+// Only change code above this line
+<!---------------------------------------------------------------------------->
+/*Destructuring allows you to assign a new variable name when extracting values.
+ You can do this by putting the new name after a colon when assigning the value.
+ */
+
+ const HIGH_TEMPERATURES = {
+   yesterday: 75,
+   today: 77,
+   tomorrow: 80
+ };
+
+ // Only change code below this line
+
+ const {today: highToday} = HIGH_TEMPERATURES;
+ const {tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+ // Only change code above this line
+
+ <!---------------------------------------------------------------------------->
+/*You can use the same principles from the previous two lessons to destructure
+ values from nested objects.*/
+ const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// Only change code below this line
+
+const {today: {low: lowToday}} = LOCAL_FORECAST;
+const {today: {high: highToday}} = LOCAL_FORECAST;
+
+// Only change code above this line
+<!---------------------------------------------------------------------------->
+/*ES6 makes destructuring arrays as easy as destructuring objects.*/
+let a = 8, b = 6;
+// Only change code below this line
+[a, b] = [b, a];
+
+console.log(b);
+console.log(a);
+<!---------------------------------------------------------------------------->
