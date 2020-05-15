@@ -130,3 +130,15 @@ const sum = (...args) => {
   return args.reduce((a, b) => a + b, 0);
 }
 <!---------------------------------------------------------------------------->
+/*ES6 introduces the spread operator, which allows us to expand arrays and
+other expressions in places where multiple parameters or elements are expected.
+*/
+*
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2 = [...arr1];  // Change this line
+
+console.log(arr2);
+
+<!---------------------------------------------------------------------------->
+/*Destructuring assignment is special syntax introduced in ES6, for neatly
+assigning values taken directly from an object.*/
