@@ -6,12 +6,15 @@
 // If the function is passed a valid PIN string, return true, else return false.*/
 <!-------------------------------Function-------------------------------------->
 function validatePIN (pin) {
-  if (pin ){
+let re = /^\da{4}a{6}$/g;
+
+  if (re){
   true;
   }
     return false;
 
   }
+
 
 
 
