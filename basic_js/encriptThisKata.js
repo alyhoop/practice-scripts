@@ -11,9 +11,12 @@ Keepin' it simple: There are no special characters in input.*/
 <!------------------------------Script---------------------------------------->
 
 
-var encryptThis = function(text, arr) {
-
-}
+const encryptThis = text => text
+  .split(' ')
+  .map(word => word
+  .replace(/(^\w)(\w)(\w*)(\w$)/, `$1$4$3$2`)
+  .replace(/^\w/, word.charCodeAt(0)))
+  .join(' ');
 
 
 <!------------------------------Tests------------------------------------------>
