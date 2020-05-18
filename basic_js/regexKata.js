@@ -1,16 +1,23 @@
-/*ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain
-anything but exactly 4 digits or exactly 6 digits.
+// //Prompt
+//
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain
+// anything but exactly 4 digits or exactly 6 digits.
+//
+// If the function is passed a valid PIN string, return true, else return false.*/
+<!-------------------------------Function-------------------------------------->
+function validatePIN (pin) {
+  if (pin ){
+  true;
+  }
+    return false;
 
-If the function is passed a valid PIN string, return true, else return false.*/
+  }
 
 
 
 
 
-
-
-
-
+<!-------------------------------Tests----------------------------------------->
 
 Test.describe("validatePIN", function() {
   Test.it("should return False for pins with length other than 4 or 6", function() {
