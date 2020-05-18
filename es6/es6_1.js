@@ -62,7 +62,7 @@ printManyTimes("freeCodeCamp");
 <!---------------------------------------------------------------------------->
 /* However, it is important to understand that objects (including arrays and
 functions) assigned to a variable using const are still mutable. Using the const
- declaration only prevents reassignment of the variable identifier.*/
+ declaration only prevents reassignment of the variable identifier. */
 
  const s = [5, 7, 2];
 function editInPlace() {
@@ -219,3 +219,22 @@ console.log(a);
 
 
  <!---------------------------------------------------------------------------->
+ //In some cases, you can destructure the object in a function argument itself.
+
+
+ const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+// Only change code below this line
+const half = ({max, min}) => (max + min) / 2.0;
+// Only change code above this line
+
+<!---------------------------------------------------------------------------->
+/*A new feature of ES6 is the template literal. This is a special type of
+string that makes creating complex strings easier.*/
