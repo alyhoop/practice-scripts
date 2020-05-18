@@ -238,3 +238,71 @@ const half = ({max, min}) => (max + min) / 2.0;
 <!---------------------------------------------------------------------------->
 /*A new feature of ES6 is the template literal. This is a special type of
 string that makes creating complex strings easier.*/
+
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["id-blacklist", "no-dup-keys"]
+};
+function makeList(arr) {
+  "use strict";
+
+  // Only change code below this line
+ const resultDisplayArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+  // Only change code above this line
+
+  return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(result.failure);
+
+<!---------------------------------------------------------------------------->
+/*ES6 adds some nice support for easily defining object literals.*/
+
+const createPerson = (name, age, gender) => {
+  "use strict";
+  // Only change code below this line
+return {name, age, gender};
+  // Only change code above this line
+};
+
+<!---------------------------------------------------------------------------->
+/*With ES6, You can remove the function keyword and colon altogether when
+ defining functions in objects.*/
+
+ // Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+<!---------------------------------------------------------------------------->
+/*ES6 provides a new syntax to create objects, using the class keyword.
+
+It should be noted that the class syntax is just syntax, and not a full-fledged
+class-based implementation of an object-oriented paradigm, unlike in languages
+such as Java, Python, Ruby, etc.
+It should be noted that the class keyword declares a new function, to which a
+constructor is added. This constructor is invoked when new is called to create
+a new object.*/
+
+// Only change code below this line
+class Vegetable {
+  constructor(name){
+    this.name = name;
+  }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+<!---------------------------------------------------------------------------->
