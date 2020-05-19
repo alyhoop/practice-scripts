@@ -383,6 +383,62 @@ import subtract from './math_functions.js';
 subtract(7,4);
 
 <!---------------------------------------------------------------------------->
+/*JS Promise*/
 
+const makeServerRequest = new Promise((resolve, reject) => {});
+
+<!---------------------------------------------------------------------------->
+/*A promise has three states: pending, fulfilled, and rejected. */
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer represents a response from a server
+  let responseFromServer;
+
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+
+<!---------------------------------------------------------------------------->
+/*Fulfilled promises*/
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+<!---------------------------------------------------------------------------->
+/*Rejected Promises*/
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {
+    reject("Data not received");
+  }
+});
+
+makeServerRequest.then(result => {
+  console.log(result);
+});
+
+makeServerRequest.catch(error => {
+  console.log(error);
+})
 
 <!---------------------------------------------------------------------------->
