@@ -350,3 +350,39 @@ export { uppercaseString, lowercaseString };
 
 
 <!---------------------------------------------------------------------------->
+/*Use import to choose what part of a file you want to use */
+
+import { uppercaseString, lowercaseString } from './string_functions.js';
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+<!---------------------------------------------------------------------------->
+/*You may also import everything from a file */
+
+import * as stringFunctions from './string_functions.js';
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+<!---------------------------------------------------------------------------->
+/*Export default creates a fallback measure for files*/
+
+export default function subtract(x, y) {
+  return x - y;
+}
+
+<!---------------------------------------------------------------------------->
+/*You may also import an export default w/ a different syntax*/
+
+import subtract from './math_functions.js';
+// Only change code above this line
+
+subtract(7,4);
+
+<!---------------------------------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------->
