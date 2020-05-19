@@ -21,9 +21,9 @@ The string has a length greater or equal to one and contains only letters from
 
  <!-----------------------------Script----------------------------------------->
 
- function printerError(s) {
- return s.match(/[^a-m]/ig).length + "/" + s.length
- }
+   function printerError(s) {
+     return (s.match(/[^a-m]/ig) || []).length + "/" + s.length
+  }
 
  <!------------------------------Tests----------------------------------------->
  Test.describe("printerError",function() {
