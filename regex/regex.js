@@ -166,5 +166,49 @@ let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i; // Change this line
 let result = userCheck.test(username);
 
 <!---------------------------------------------------------------------------->
+/*Space match or non-whitespace match*/
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s+/g; // Change this line
+let result = sample.match(countWhiteSpace);
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
+
 <!---------------------------------------------------------------------------->
+/*Quantity matches*/
+
+let ohStr = "Ohhh no";
+let ohRegex = /(oh{3,6})\s(no)/gi; // Change this line
+let result = ohRegex.test(ohStr);
+
+let haStr = "Hazzzzah";
+let haRegex = /(Haz{4,}ah)/; // Change this line
+let result = haRegex.test(haStr);
+
+let timStr = "Timmmmber";
+let timRegex = /tim{4}ber/i; // Change this line
+let result = timRegex.test(timStr);
+
+<!---------------------------------------------------------------------------->
+/*Partial matches*/
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+
+<!---------------------------------------------------------------------------->
+/*Use lookaheads in the pwRegex to match passwords that are greater than 5
+characters long, do not begin with numbers, and have two consecutive digits.*/
+
+let sampleWord = "astronaut";
+let pwRegex = /^\D(?=\w{5})(?=\w*\d{2})/; // Change this line
+let result = pwRegex.test(sampleWord);
+
+<!---------------------------------------------------------------------------->
+/*Checking for groups of characters using ()*/
+
+
+
 <!---------------------------------------------------------------------------->
