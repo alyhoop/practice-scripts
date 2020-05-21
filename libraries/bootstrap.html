@@ -11,6 +11,12 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
     crossorigin="anonymous">
 
+    <!--Font Awesome-->
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+
     <title>CatPhotoApp</title>
   </head>
   <body>
@@ -18,17 +24,9 @@
       <link href="https://fonts.googleapis.com/css?family=Lobster"
        rel="stylesheet" type="text/css">
       <style>
-        .red-text {
-          color: red;
-        }
 
         h2 {
           font-family: Lobster, Monospace;
-        }
-
-        p {
-          font-size: 16px;
-          font-family: Monospace;
         }
 
         .thick-green-border {
@@ -38,17 +36,17 @@
           border-radius: 50%;
         }
 
-        .smaller-image {
-          width: 100px;
-        }
       </style>
-
-      <h2 class="red-text text-center">CatPhotoApp</h2>
-
-      <p>Click here for <a href="#">cat photos</a>.</p>
-
-      <a href="#"><img class="smaller-image thick-green-border"
-      src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-8">
+            <h2 class="text-primary text-center">CatPhotoApp</h2>
+          </div>
+          <div class="col-xs-4">
+            <a href="#"><img class="img-responsive thick-green-border"
+            src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+          </div>
+        </div>
 
       <a href="#"><img class="img-responsive" src="https://bit.ly/fcc-running-cats" alt="Running Cat"></a>
 
@@ -64,7 +62,7 @@
         </div>
       </div>
 
-      <p>Things cats love:</p>
+      <p>Things cats <span class="text-danger">love:</span></p>
       <ul>
         <li>cat nip</li>
         <li>laser pointers</li>
