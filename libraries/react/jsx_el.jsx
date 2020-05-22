@@ -1,1 +1,1 @@
-const JSX = <div>Hello JSX</div>;
+const JSX = <h1>Hello JSX!</h1>;
