@@ -21,11 +21,12 @@ class MyComponent extends React.Component {
   render() {
     // change code below this line
   return (
-  <div className="hi">
+  <div>
     <h1>
     Hello React!
     </h1>
-  </div> );
+  </div>
+  );
 
 
     // change code above this line
