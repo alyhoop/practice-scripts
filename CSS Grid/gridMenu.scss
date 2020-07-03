@@ -14,7 +14,6 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  //grid-template-rows: 100px;
   width: 1000px;
   grid-gap: 10px;
 }
@@ -22,10 +21,47 @@ body {
 .grid > * {
   background-color: $brown-lighter;
   color: white;
+  border: 3px dashed $brown-light;
   border-radius: 20px;
   padding: 10px;
 }
 
+.icon,
+a {
+  font-family: "Barrio", cursive;
+  color: $lightgray;
+  font-size: 8px;
+  text-align: right;
+  margin: 5px;
+}
+
+.title {
+  text-align: left;
+  font-size: 80px;
+  font-family: "Barrio", cursive;
+}
+
 h1 {
-  font: italic 20px/1.1 "Playfair Display", serif;
+  text-align: center;
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-size: 20px;
+}
+
+h4,
+h5 {
+  font-family: "Barrio", cursive;
+  letter-spacing: 0.2em;
+}
+
+.test {
+  border: 3px dashed $brown-light;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 5px;
+  min-height: 370px;
+}
+
+p {
+  letter-spacing: 5px;
 }
