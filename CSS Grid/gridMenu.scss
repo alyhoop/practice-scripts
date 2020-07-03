@@ -1,0 +1,31 @@
+$lightgray: #eee;
+$brown-lighter: #dbc7b1;
+$brown-light: #d69762;
+$brown: #916953;
+$brown-dark: #543b2e;
+$brown-reallydark: #26130f;
+
+body {
+  padding: 5%;
+  background: #bfb1ac;
+  font-family: "Raleway", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  //grid-template-rows: 100px;
+  width: 1000px;
+  grid-gap: 10px;
+}
+
+.grid > * {
+  background-color: $brown-lighter;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+h1 {
+  font: italic 20px/1.1 "Playfair Display", serif;
+}
