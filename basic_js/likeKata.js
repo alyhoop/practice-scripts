@@ -24,7 +24,7 @@ describe('example tests', function() {
   });
 });
 ------------------------------------------------------------------------------
-//More optimal
+//More optimal solution
 // function likes(names) {
 //   names = names || [];
 //   switch(names.length){
