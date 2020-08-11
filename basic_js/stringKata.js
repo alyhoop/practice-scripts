@@ -23,3 +23,11 @@ function getStrings(city){
 
   return result.join(',');
 };
+
+function poop(){
+  let count = 0;
+  for (let i = 0; i < 6; i++){
+    count++
+  }
+  return count
+}
