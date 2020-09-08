@@ -37,3 +37,16 @@ SELECT * FROM Customers;
 
 SELECT DISTINCT Country FROM Customers;
 <></>
+
+
+CREATE TABLE student (
+  student_id INT PRIMARY KEY,
+  name VARCHAR(20),
+  major VARCHAR(20),
+);
+
+DESCRIBE student();
+
+DROP TABLE student;
+
+ALTER TABLE student add gpa DECIMAL(3, 2);
