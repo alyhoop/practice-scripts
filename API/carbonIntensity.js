@@ -22,3 +22,19 @@ fetch("https://api.carbonintensity.org.uk/intensity/factors", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
+
+//LOTR
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer l3ZyoVvz_WFel-b_p7ZY");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://the-one-api.dev/v2/movie", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
