@@ -26,7 +26,7 @@ fetch("https://api.carbonintensity.org.uk/intensity/factors", requestOptions)
 //LOTR
 
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer l3ZyoVvz_WFel-b_p7ZY");
+myHeaders.append("Authorization", "Bearer");
 
 var requestOptions = {
   method: 'GET',
